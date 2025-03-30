@@ -51,7 +51,7 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/Rohit_Dhadambe_Resume.pdf",
+      href: "/Rohit Dhadambe Resume .pdf",
       style: "rounded-br-md",
       download: true,
     },
