@@ -9,7 +9,7 @@ import Mysql from "../assets/mysql.png";
 import node from "../assets/node.png";
 import cpp from "../assets/cpp.png";
 import python from "../assets/python.png";
-import Java from "../assets/Java.jpg";
+import Java from "../assets/java.jpg";
 import Postgre from "../assets/Postgre.jpg";
 import Firebase from "../assets/Firebase.jpg";
 import leetcode from "../assets/leetcode.png";
