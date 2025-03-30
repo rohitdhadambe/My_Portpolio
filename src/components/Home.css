@@ -1,0 +1,9 @@
+/* Home.css */
+.fixed-image {
+  position: relative;
+  transition: none; /* Disable any transition that might cause movement */
+}
+
+.typewriter-container {
+  display: inline-block; /* Ensures the typewriter text doesn't affect the surrounding elements */
+}
