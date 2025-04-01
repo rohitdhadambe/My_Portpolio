@@ -18,7 +18,7 @@ const Home = () => {
             <span className="typewriter-container text-blue-500">
               <br></br>
               <Typewriter
-                words={['Web Developer','Softwere Developer']}
+                words={['Web Developer','Software Developer']}
                 loop={0}
                 cursor
                 cursorStyle='_'
