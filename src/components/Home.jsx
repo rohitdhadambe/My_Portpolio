@@ -8,14 +8,14 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 pt-20"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-6xl font-bold text-white">
-          Hey..........! <br></br> I am  Rohit  Dhadambe!
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center w-full px-2 sm:px-4 md:flex-row gap-4 md:gap-8">
+        <div className="flex flex-col justify-center w-full md:w-1/2">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+          Hey! <br className="hidden sm:block"></br> I'm Rohit Dhadambe
             <br />
-            <span className="typewriter-container text-blue-500">
+            <span className="typewriter-container text-blue-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
               <br></br>
               <Typewriter
                 words={['Web Developer','Software Developer']}
@@ -29,13 +29,8 @@ const Home = () => {
             </span>
           </h2>
 
-          <p className="text-white py-5 max-w-l">
-          I am a dedicated 3rd-year Computer Engineering student at G.H. 
-          Raisoni College of Engineering and Management, Pune 🎓 - (Autonomous Institute). I
-          possess foundational knowledge in the computer field 💻, with practical experience in 
-          both front-end 🌟 and back-end development 🔧. Currently, I am engaged in a project that 
-          integrates these skills, demonstrating a solid understanding of full-stack development 🌐.
-          My passion for technology fuels my desire to innovate and create impactful solutions 🌍✨.
+          <p className="text-white py-4 sm:py-5 text-sm sm:text-base md:text-lg leading-relaxed">
+          I am a dedicated 3rd-year Computer Engineering student at G.H. Raisoni College of Engineering and Management, Pune 🎓. I possess foundational knowledge in computer science 💻 with practical experience in both front-end 🌟 and back-end development 🔧. Currently working on projects that integrate full-stack development 🌐. Passionate about creating impactful solutions 🌍✨
           </p>
 
           <div>
@@ -53,11 +48,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative w-2/3 md:w-full">
+        <div className="relative w-full sm:w-4/5 md:w-1/2 flex justify-center">
           <img
             src={cafe}
             alt="my profile"
-            className="rounded-3xl mx-auto mb-20 ml-8"
+            className="rounded-2xl sm:rounded-3xl w-full max-w-xs sm:max-w-sm md:max-w-md object-cover"
           />
         </div>
       </div>

@@ -37,30 +37,30 @@ const Portfolio = () => {
   ];
 
   return (
-    <div name="projects" className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-12">
-      <div className="max-w-screen-lg mx-auto px-4 flex flex-col justify-center w-full">
-        <div className="pb-8 pt-5">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">Projects</p>
-          <p className="py-6 text-lg">Check out some of my work below</p>
+    <div name="projects" className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-8 sm:py-12">
+      <div className="max-w-screen-lg mx-auto px-3 sm:px-4 md:px-6 flex flex-col justify-center w-full">
+        <div className="pb-6 sm:pb-8 pt-5">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold inline border-b-4 border-gray-500">Projects</p>
+          <p className="py-4 sm:py-6 text-sm sm:text-base md:text-lg">Check out some of my work below</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {portfolios.map(({ id, src, name, demoLink, codeLink }) => (
-            <div key={id} className="bg-gray-900 rounded-lg shadow-md shadow-gray-700 overflow-hidden">
+            <div key={id} className="bg-gray-900 rounded-lg shadow-md shadow-gray-700 overflow-hidden hover:shadow-lg hover:shadow-cyan-500 transition-all duration-300">
               <img
                 src={src}
                 alt={name}
-                className="w-full h-48 object-cover rounded-t-lg hover:scale-105 transition-transform duration-200"
+                className="w-full h-40 sm:h-48 object-cover rounded-t-lg hover:scale-105 transition-transform duration-200"
                 loading="lazy"
               />
-              <div className="p-4">
-                <p className="text-center text-lg font-semibold">{name}</p>
-                <div className="flex justify-center mt-4">
+              <div className="p-3 sm:p-4">
+                <p className="text-center text-base sm:text-lg font-semibold line-clamp-2">{name}</p>
+                <div className="flex justify-center gap-2 sm:gap-3 mt-3 sm:mt-4">
                   <a
                     href={demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 text-center px-4 py-2 bg-gray-800 hover:bg-gray-600 rounded-lg transition duration-200"
+                    className="flex-1 text-center px-3 sm:px-4 py-2 text-sm sm:text-base bg-gray-800 hover:bg-cyan-600 rounded-lg transition duration-200"
                   >
                     Demo
                   </a>
@@ -68,7 +68,7 @@ const Portfolio = () => {
                     href={codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-1/2 text-center px-4 py-2 bg-gray-800 hover:bg-gray-600 rounded-lg transition duration-200 ml-2"
+                    className="flex-1 text-center px-3 sm:px-4 py-2 text-sm sm:text-base bg-gray-800 hover:bg-cyan-600 rounded-lg transition duration-200"
                   >
                     Code
                   </a>

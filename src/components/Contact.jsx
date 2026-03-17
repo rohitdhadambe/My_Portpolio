@@ -37,44 +37,44 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-      <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
-      <form onSubmit={onSubmit} className="flex flex-col w-full md:w-1/2 p-4">
+    <div id="contact" className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white py-12">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 px-4 text-center">Contact Me</h1>
+      <form onSubmit={onSubmit} className="flex flex-col w-full max-w-md sm:max-w-lg px-4">
         <input
           type="text"
           name="name"
           placeholder="Enter your name"
           required
-          className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-cyan-500 transition-colors duration-300"
+          className="p-2 sm:p-3 mb-3 sm:mb-4 bg-transparent border-2 border-gray-500 rounded-md text-white placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:border-cyan-500 transition-colors duration-300"
         />
         <input
           type="email"
           name="email"
           placeholder="Enter your email"
           required
-          className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-cyan-500 transition-colors duration-300"
+          className="p-2 sm:p-3 mb-3 sm:mb-4 bg-transparent border-2 border-gray-500 rounded-md text-white placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:border-cyan-500 transition-colors duration-300"
         />
         <textarea
           name="message"
           placeholder="Enter your message"
-          rows="10"
+          rows="6"
           required
-          className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-cyan-500 transition-colors duration-300"
+          className="p-2 sm:p-3 mb-3 sm:mb-4 bg-transparent border-2 border-gray-500 rounded-md text-white placeholder-gray-400 text-sm sm:text-base focus:outline-none focus:border-cyan-500 transition-colors duration-300 resize-none"
         ></textarea>
 
         <button
           type="submit"
-          disabled={loading} // Disable button when loading
-          className={`text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md ${
-            loading ? "opacity-50 cursor-not-allowed" : "hover:scale-110"
+          disabled={loading}
+          className={`text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 sm:px-8 py-2 sm:py-3 my-4 sm:my-8 mx-auto flex items-center rounded-md text-sm sm:text-base font-medium ${
+            loading ? "opacity-50 cursor-not-allowed" : "hover:scale-105"
           } transition-transform duration-300`}
         >
-          {loading ? "Sending..." : "Contact-->"}
+          {loading ? "Sending..." : "Contact Me"}
         </button>
       </form>
       
       {/* Show the result message only when there is one */}
-      {result && <span className={`text-lg mt-4 ${result.includes("Successfully") ? "text-green-500" : "text-red-500"}`}>{result}</span>}
+      {result && <span className={`text-sm sm:text-lg mt-4 px-4 text-center ${result.includes("Successfully") ? "text-green-500" : "text-red-500"}`}>{result}</span>}
     </div>
   );
 }
